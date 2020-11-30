@@ -1,0 +1,23 @@
+{
+    "freshdeskDomain": {
+        "display_name": "domain name",
+        "description": "Please enter your domain name",
+        "type": "domain",
+        "required": true,
+        "type_attributes": {
+          "product": "freshdesk"
+        }
+    },
+      "freshdeskAPIkey": {
+        "display_name": "API key",
+        "description": "Please enter your API key",
+        "type": "api_key",
+        "required": true,
+        "type_attributes": {
+          "product": "freshdesk"
+        },
+        "secure": true
+    }
+
+
+}

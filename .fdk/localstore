@@ -1,0 +1,36 @@
+{
+    "github_101_101_freshdesk": {
+        "github_101_101_custom_iparams": {
+            "__meta": {
+                "secure": ["freshdeskAPIkey"]
+            },
+            "freshdeskDomain": "fwsc",
+            "freshdeskAPIkey": "hXwSgVS928y3j7eA5z",
+            "$freshdeskDomain": {
+                "url": "https://fwsc.freshdesk.com",
+                "name": "freshdesk"
+            }
+        },
+        "github_101_101_oauth_iparams": {},
+        "github_101_101_oauth_appstate": "35079fe9-4cc5-4107-ac39-f083141e591d",
+        "github_101_101_oauth": {
+            "access_token": "a4f91def6e1f0d6fb89f19a0d564ba2708c47799"
+        }
+    },
+    "Github Sync:Freshdesk_freshdesk": {
+        "0": {
+            "issueID": 0,
+            "conversations": [-1]
+        },
+        "createdAt": 1606394531385,
+        "updatedAt": 1606394531385
+    },
+    "Github Sync:Github_freshdesk": {
+        "0": {
+            "ticketID": 0,
+            "comments": [-1]
+        },
+        "createdAt": 1606394531382,
+        "updatedAt": 1606394531382
+    }
+}

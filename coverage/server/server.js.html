@@ -1,0 +1,572 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for server/server.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">server/</a> server.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">43.24% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>32/74</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">20% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>2/10</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">66.67% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>4/6</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">42.47% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>31/73</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170</td><td class="line-coverage quiet"><span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const details = require('./details');
+const database = require('./database');
+const fdActions = require('./fdActions');
+&nbsp;
+exports = {
+	events: [
+		{ event: "onTicketCreate", callback: "onTicketCreateCallback" },
+		{ event: 'onConversationCreate', callback: 'onConversationCreateCallback' },
+		{ event: 'onAppInstall', callback: 'onAppInstallHandler' },
+		{ event: 'onExternalEvent', callback: 'onWebhookCallbackHandler' },
+		{ event: 'onAppUninstall', callback: 'onAppUninstallHandler' }
+	],
+&nbsp;
+	onTicketCreateCallback: async function(payload)<span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >		console.info('A ticket has been created in Freshdesk');</span>
+		let ticketID = <span class="cstat-no" title="statement not covered" >payload.data.ticket.id;</span>
+		let connectionDetails = <span class="cstat-no" title="statement not covered" >details.getConnectionDetails();</span>
+		let content = <span class="cstat-no" title="statement not covered" >{</span>
+			'title': payload.data.ticket.subject
+		}
+&nbsp;
+		let options = <span class="cstat-no" title="statement not covered" >{</span>
+			headers: connectionDetails.GITheaders,
+			isOAuth: true,
+			body: JSON.stringify(content)
+		}
+<span class="cstat-no" title="statement not covered" >		try {</span>
+<span class="cstat-no" title="statement not covered" >			console.info('Creating an issue in Github');</span>
+			let FDmapping = <span class="cstat-no" title="statement not covered" >await database.getDbEntry('Freshdesk');</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >			if (!(ticketID in FDmapping)){</span>
+				let responseData = <span class="cstat-no" title="statement not covered" >await $request.post(connectionDetails.GITurl, options);</span>
+				let issueID = <span class="cstat-no" title="statement not covered" >JSON.parse(responseData.response).number;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >				await database.createDbEntry(ticketID, issueID);</span>
+<span class="cstat-no" title="statement not covered" >				console.info(`Successfully created an issue(${issueID}) in Github`);</span>
+			}
+		}
+		catch(error){
+<span class="cstat-no" title="statement not covered" >			console.error('error in creating an issue in Github -', error)</span>
+		}
+&nbsp;
+	},
+	
+ 	onConversationCreateCallback: async function(payload) <span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >		console.info('A conversation has been created in Freshdesk');</span>
+		let conversationData = <span class="cstat-no" title="statement not covered" >payload.data.conversation;</span>
+		let ticketID = <span class="cstat-no" title="statement not covered" >conversationData.ticket_id;</span>
+		let convoID = <span class="cstat-no" title="statement not covered" >conversationData.id;</span>
+		let connectionDetails = <span class="cstat-no" title="statement not covered" >details.getConnectionDetails();</span>
+&nbsp;
+		let content = <span class="cstat-no" title="statement not covered" >{</span>
+			'body': conversationData.body_text
+		}
+		let options = <span class="cstat-no" title="statement not covered" >{</span>
+			'headers': connectionDetails.GITheaders,
+			'isOAuth': true,
+			'body': JSON.stringify(content)
+		}
+<span class="cstat-no" title="statement not covered" >		try{</span>
+<span class="cstat-no" title="statement not covered" >			console.info('Creating a comment under the linked issue in Github');</span>
+			let FDmapping = <span class="cstat-no" title="statement not covered" >await database.getDbEntry('Freshdesk');</span>
+			let GITmapping = <span class="cstat-no" title="statement not covered" >await database.getDbEntry('Github');</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >			if (ticketID in FDmapping &amp;&amp; !((FDmapping[ticketID]['conversations']).includes(convoID))){</span>
+				let issueID = <span class="cstat-no" title="statement not covered" >FDmapping[ticketID].issueID;</span>
+				let response = <span class="cstat-no" title="statement not covered" >await $request.post(connectionDetails.GITurl + `/${issueID}/comments`, options);</span>
+				let commentID = <span class="cstat-no" title="statement not covered" >JSON.parse(response.response).id;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >				await database.updateDbEntry(ticketID, issueID, convoID, commentID, FDmapping, GITmapping);</span>
+<span class="cstat-no" title="statement not covered" >				console.info(`Successfully created a comment(${commentID}) under the linked issue in Github`)</span>
+			}
+		}
+		catch(error){
+<span class="cstat-no" title="statement not covered" >			console.error('Error in creating a comment in Github - ', error);</span>
+		}
+&nbsp;
+	},
+&nbsp;
+	onAppInstallHandler: async function(){
+		console.info('App is getting installed');
+		let uniqueURL;
+		try{
+			uniqueURL = await generateTargetUrl();
+		}
+		catch(error){
+<span class="cstat-no" title="statement not covered" >			console.error('Error in generating URL - ', error);</span>
+<span class="cstat-no" title="statement not covered" >			renderData({message: "Error in generating URL."});</span>
+			
+		}
+&nbsp;
+		let connectionDetails = details.getConnectionDetails();
+		
+		let url = connectionDetails.GITurl.slice(0,-6) + 'hooks';
+		let options = {
+			headers: connectionDetails.GITheaders,
+			isOAuth: true,
+			json: {
+				"name": "web",
+				"active": true,
+				"events": [
+					"issue_comment",
+					"issues"
+				],
+				"config": {
+					"url": uniqueURL,
+					"content_type": "json"
+				}
+			}
+		}
+		try{
+			await $request.post(url, options);
+			await database.createDbEntry(0, 0);
+			console.info('Successfully linked the wekhook callback url');
+			renderData();
+		}
+&nbsp;
+		catch(error){
+<span class="cstat-no" title="statement not covered" >			console.error('Error in setting the webhook url -', error);</span>
+<span class="cstat-no" title="statement not covered" >			renderData({message: "Error in installing the app."});</span>
+		}
+		
+	},
+&nbsp;
+	onWebhookCallbackHandler: async function(payload){
+		let data = payload.data;
+		let type = data.action;
+		console.info('A change has been triggered in github');
+		try {
+			<span class="missing-if-branch" title="if path not taken" >I</span>if (type === 'opened'){
+<span class="cstat-no" title="statement not covered" >				await fdActions.createNewTicket(data)</span>
+			}
+			else <span class="missing-if-branch" title="if path not taken" >I</span>if (type === 'created'){
+<span class="cstat-no" title="statement not covered" >				await fdActions.createNewConversation(data);</span>
+			}
+		}
+		catch(error){
+			//When other events are triggered in the issues part
+<span class="cstat-no" title="statement not covered" >			console.error('Error occuring at webhook callback handler -', error);</span>
+		}
+		
+	},
+&nbsp;
+	onAppUninstallHandler: async function(){
+		console.info('App is getting uninstalled');
+		let connectionDetails = details.getConnectionDetails();
+		
+		let url = connectionDetails.GITurl.slice(0,-6) + 'hooks';
+		let options = {
+			headers: connectionDetails.GITheaders,
+			isOAuth: true
+		}
+&nbsp;
+		try{
+			let data = await $request.get(url, options);
+			let response = JSON.parse(data.response);
+			let activeWebhookID = (response.find(each =&gt; each.last_response.code === 200)).id;
+<span class="cstat-no" title="statement not covered" >			await $request.delete(url + `/${activeWebhookID}`, options);</span>
+<span class="cstat-no" title="statement not covered" >			console.info('App is successfully uninstalled');</span>
+<span class="cstat-no" title="statement not covered" >			renderData();</span>
+		}
+		catch(error){
+			console.error('Error in removing the webhook url -', error);
+			renderData({message: "Error in uninstalling the app."});
+		}
+&nbsp;
+	}
+&nbsp;
+};
+	</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Nov 26 2020 18:10:36 GMT+0530 (India Standard Time)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>
